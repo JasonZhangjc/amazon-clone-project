@@ -18,7 +18,7 @@ You will need to use:
 - Type in "npm install react-router-dom react-currency-format"
 - Type in "npm start" and wait for the webpage of your localhost. You will see a website. Then you are ready for deploying the website.
 
-### DEPLOY the app
+### DEPLOY the app:
 - Type in "firebase init"
 - Type in "npm run build"
 - Type in "firebase deploy"
