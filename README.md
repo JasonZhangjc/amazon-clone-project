@@ -9,9 +9,9 @@ You will need to use:
 
 ### SETUP the project on your computers (using Linux as a running exmaple):
 - The **CURRENT** folder is the folder where you can see "README.md  node_modules  package.json  package-lock.json  public  README.md  src" by typing in "ls". For all the "type in" steps below, make sure you do them in the **CURRENT** folder.
-- Go to Firebase to create a project.
 - Type in "npm install firebase"
 - Type in "sudo npm install -g firebase-tools"
+- Go to Firebase to create a project.
 - Go to "project settings" of your newly created Firebase project.
 - Find "Firebase SDK snippet", click "Config", copy the code below, open "firebase.js", replace corresponding code with your copied code.
 - Type in "npm install @material-ui/core @material-ui/icons"
