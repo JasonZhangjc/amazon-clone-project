@@ -7,7 +7,13 @@ import Checkout from "./Checkout"
 import Login from "./Login";
 import { auth } from "./firebase"
 import { useStateValue } from "./StateProvider"
+import Payment from './Payment'
+import { loadStripe } from "@stripe/stripe-js"
+import { Elements } from "@stripe/react-stripe-js"
 
+
+const promise = loadStripe('pk_test_51KJhaBGUBm9Jk2szHnRsHfYgBBIZVa2Pmi5DTsQVcxSm8xrJgLd1x5HSbMMnRtGCCG5Itv9EtEuUPpqRfzcvMnw000H8SOVsUO')
+// Replace this one with your own Publishable key
 
 function App() {
   const [{}, dispatch] = useStateValue()
@@ -41,6 +47,7 @@ function App() {
       <div className="app">
 
         <Switch>
+
           <Route path="/login">
             <Login />
           </Route>
@@ -50,11 +57,20 @@ function App() {
             <Checkout />
           </Route>
 
-          {/* default */}
+          <Route path='/payment'>
+            <Header />
+            <Elements stripe={promise}>
+              <Payment />
+            </Elements>
+            {/* <h1>I am the payment route</h1> */}
+          </Route>
+
+          {/* default home page */}
           <Route path="/">
             <Header />
             <Home />
           </Route>
+
         </Switch>
         
       </div>
