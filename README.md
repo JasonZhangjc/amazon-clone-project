@@ -27,9 +27,12 @@ Sketch of the project structure:
 
 ### DEPLOY the app:
 <!-- - Type in "firebase init" -->
-- Type in "npm run build"
-- Type in "firebase deploy"
+- Type in "npm run build".
+- Type in "firebase deploy" for the whole thing.
 - Copy the URL for the app and open it in your browser. You will see an Amazon website clone.
+- Type in "firebase deploy --only hosting" for only the front-end.
+- Go to the "functions" folder, type in "firebase deploy --only functions" for only the back-end.
+
 
 <!-- ### CREATE the back-end:
 - Type in "firebase init".
